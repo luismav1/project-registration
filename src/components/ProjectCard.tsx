@@ -1,8 +1,7 @@
 import { Project } from "@prisma/client";
 import { useProject} from "@/context/ProjectContext";
 import React from "react";
-import Dialog from '@material-ui/core/Dialog';
-import { DialogContent, DialogContentText, DialogTitle } from "@material-ui/core";
+import { Dialog, DialogTitle, DialogContent, DialogContentText } from "@material-ui/core";
 
 function ProjectCard({ project }: {project: Project}) {
     const { deleteProject } = useProject()
@@ -15,6 +14,8 @@ function ProjectCard({ project }: {project: Project}) {
     const handleClose = () => {
       setOpen(false);
     };
+
+
     return (
         <div key={project.id} className="bg-slate-400 p-4 my-2 flex
         justify-between" style={{width: '100%'}} >
@@ -30,7 +31,7 @@ function ProjectCard({ project }: {project: Project}) {
                   Aquí puedes poner la lista de tareas del proyecto. Por ejemplo:
                 </DialogContentText>
                 <ul>
-                  <li>Tarea 1</li>
+                  <li>data</li>
                   <li>Tarea 2</li>
                   <li>Tarea 3</li>
                   // Asegúrate de reemplazar esto con tus datos reales

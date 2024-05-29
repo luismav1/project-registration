@@ -4,7 +4,6 @@ import { ProjectContext } from "@/context/ProjectContext";
 function ProjectDropdown() {
 
     const { projects, loadProjects } = useContext(ProjectContext)
-    console.log(projects)
     return (
         <form>
             <input

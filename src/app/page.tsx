@@ -8,7 +8,7 @@ import ProjectDropdown from "@/components/ProjectDropdown";
 function HomePage(){
 
   const {projects, loadProjects} = useContext(ProjectContext)
-  console.log(projects)
+
 
   useEffect(() => {
     loadProjects()
