@@ -12,8 +12,6 @@ function ProjectDropdown() {
                 autoFocus
                 placeholder="Task"
                 className="w-full px-4 py-2 text-black bg-white rounded-md focus:outline-none focus:ring focus:ring-blue-600 my-2"
-
-
             />
             <div>
                 <select className="px-4 py-2 mb-2 border rounded-md w-full">

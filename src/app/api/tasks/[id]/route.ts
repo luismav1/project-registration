@@ -11,12 +11,12 @@ export async function GET(request: Request, { params }: Params ) {
         where: {
             projectId: Number(params.id)
         }
-    })
+    });
 
     return NextResponse.json(task)
     } catch (error) {
         if (error instanceof Error) {
             return NextResponse.json({ message: error.message }, { status: 500 });
-        }
-    }
-}
+        };
+    };
+};

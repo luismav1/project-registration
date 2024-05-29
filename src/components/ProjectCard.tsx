@@ -4,6 +4,8 @@ import React from "react";
 import { Dialog, DialogTitle, DialogContent, DialogContentText } from "@material-ui/core";
 
 function ProjectCard({ project }: {project: Project}) {
+  
+
     const { deleteProject } = useProject()
     const [open, setOpen] = React.useState(false);
 
@@ -28,20 +30,18 @@ function ProjectCard({ project }: {project: Project}) {
               <DialogTitle>{"Tareas del proyecto"}</DialogTitle>
               <DialogContent>
                 <DialogContentText>
-                  Aquí puedes poner la lista de tareas del proyecto. Por ejemplo:
                 </DialogContentText>
                 <ul>
-                  <li>data</li>
-                  <li>Tarea 2</li>
+                  <li>Develop screens</li>
+                  <li>Optimize code</li>
                   <li>Tarea 3</li>
-                  // Asegúrate de reemplazar esto con tus datos reales
                 </ul>
               </DialogContent>
             </Dialog>
             <button onClick={() => { deleteProject(project.id)}} className="bg-red-600 text-white p-2 rounded-md">Delete</button>
           </div>
         </div>
-    )
-}
+    );
+};
 
 export default ProjectCard

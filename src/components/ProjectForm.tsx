@@ -1,14 +1,12 @@
 "use client"
-import { useRouter } from 'next/navigation'
 import {useState} from 'react'
 import { useProject } from '@/context/ProjectContext'
 
-
 function ProjectForm() {
 
-    const [name, setName] = useState('')
+    const [name, setName] = useState('');
     
-    const {createProject} = useProject()
+    const {createProject} = useProject();
     return (
         <form 
             onSubmit={async(e) => {
@@ -30,8 +28,7 @@ function ProjectForm() {
                 Create
              </button>
         </form>
-    )
-
-}
+    );
+};
 
 export default ProjectForm
